@@ -18,7 +18,24 @@ module.exports = {
       {
         test: /\.[tj]sx?$/,
         use: ['ts-loader'],
-       // exclude: /node_modules/
+      },
+      {
+        test: /\.[cls][ace]?ss$/,
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+              },
+              onlyLocals: true,
+            }
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       }
     ]
   },

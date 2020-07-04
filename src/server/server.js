@@ -13,6 +13,6 @@ app.get( '/', ( request, response ) => {
   );
 } );
 
-app.listen( 3030, () => {
-  console.log('Server started on 3030');
+app.listen( 3000, () => {
+  console.log('Server started on 3000');
 } );

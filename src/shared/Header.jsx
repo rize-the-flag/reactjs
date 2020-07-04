@@ -1,11 +1,13 @@
 import React from 'react';
+import { hot } from 'react-hot-loader/root';
+import styles from './header.scss';
 
 const Header = () => {
   return (
     <header>
-      <h1>Reddit for our own</h1>
+      <h1 className = {styles.example} >Hello React</h1>
     </header>
-  )
+  );
 };
 
-export default Header;
+export default hot( Header );
